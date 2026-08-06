@@ -4,7 +4,7 @@ Um motor de tradução HL7 v2 -> FHIR: parsing, MPI, armazenamento imutável com
 reimplementar um servidor FHIR do zero.
 
 **Não é um servidor FHIR conformante.** Não implementa a spec completa (busca, `_history`,
-`CapabilityStatement`, validação de perfil etc)
+`CapabilityStatement`, validação de perfil etc).
 
 ## O que é
 
