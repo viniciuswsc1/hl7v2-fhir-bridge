@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: hl7-fhir-bridge
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:hl7fhirbridge}
+    username: ${DB_USER:hl7fhirbridge}
+    password: ${DB_PASSWORD:hl7fhirbridge}
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
