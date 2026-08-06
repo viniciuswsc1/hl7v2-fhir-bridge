@@ -5,9 +5,6 @@
 de tradução HL7 v2 -> FHIR: parsing, MPI, armazenamento imutável com auditoria. Não
 reimplementar um servidor FHIR do zero.
 
-Projeto de portfólio pra vaga de backend em healthtech. Tô aprendendo Java junto com o
-domínio, então preferi manter o código simples e legível em vez de esperto.
-
 ## O que é
 
 Motor de integração que recebe mensagens HL7 v2, guarda a mensagem crua sem alterar depois
