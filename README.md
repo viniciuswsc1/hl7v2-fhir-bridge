@@ -1,9 +1,10 @@
 # hl7-fhir-bridge
 
-**Não é um servidor FHIR conformante.** Não implementa a spec completa (busca, `_history`,
-`CapabilityStatement`, validação de perfil etc), e não é essa a intenção. O foco é o motor
-de tradução HL7 v2 -> FHIR: parsing, MPI, armazenamento imutável com auditoria. Não
+O foco é o motor de tradução HL7 v2 -> FHIR: parsing, MPI, armazenamento imutável com auditoria. Não
 reimplementar um servidor FHIR do zero.
+
+**Não é um servidor FHIR conformante.** Não implementa a spec completa (busca, `_history`,
+`CapabilityStatement`, validação de perfil etc)
 
 ## O que é
 
