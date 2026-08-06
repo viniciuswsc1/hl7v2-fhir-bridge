@@ -2,7 +2,7 @@
 
 ## Status
 
-Aceito (rascunho — reescrever com minhas palavras).
+Aceito (rascunho, reescrever com minhas palavras).
 
 ## Contexto
 
@@ -20,7 +20,7 @@ Prós:
   normalizar cada um em colunas próprias significa uma tabela nova a cada recurso novo.
 - `jsonb` do Postgres aceita índice GIN e operadores de query se algum dia precisar consultar
   por dentro do conteúdo, sem precisar disso agora.
-- Não fingimos ser um servidor FHIR de busca/consulta — o conteúdo é lido de volta como está,
+- Não fingimos ser um servidor FHIR de busca/consulta. O conteúdo é lido de volta como está,
   não interrogado campo a campo pelo banco.
 
 Contras:
@@ -32,7 +32,7 @@ Contras:
 
 ## Alternativas consideradas
 
-- Schema relacional normalizado por tipo de recurso — descartado: overhead de schema grande
+- Schema relacional normalizado por tipo de recurso: descartado, overhead de schema grande
   para algo que não pretende ser um servidor FHIR conformante.
-- Um documento externo (Mongo etc.) — descartado: stack fixa em Postgres, mais uma peça em
+- Um documento externo (Mongo etc.): descartado, stack fixa em Postgres, mais uma peça em
   movimento sem justificativa clara para o escopo do projeto.
