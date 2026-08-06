@@ -38,4 +38,17 @@ public class FhirResourceRepository {
                 .query(FhirResource.class)
                 .optional();
     }
+
+    // Assumes at most one row per (resourceType, resourceId): true today because nothing
+    // creates version > 1 yet. Once replay lands this needs ORDER BY version DESC LIMIT 1.
+    public Optional<FhirResource> findByTypeAndResourceId(String resourceType, String resourceId) {
+        return jdbcClient.sql("""
+                        SELECT %s FROM fhir_resource
+                        WHERE resource_type = :resourceType AND resource_id = :resourceId
+                        """.formatted(COLUMNS))
+                .param("resourceType", resourceType)
+                .param("resourceId", resourceId)
+                .query(FhirResource.class)
+                .optional();
+    }
 }
